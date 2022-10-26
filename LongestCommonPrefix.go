@@ -1,4 +1,4 @@
-package hackerrank
+package problemsolving
 
 import "sort"
 

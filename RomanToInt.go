@@ -1,4 +1,4 @@
-package hackerrank
+package problemsolving
 
 func romanToInt(s string) int  {
 	maps := map[byte]int{
