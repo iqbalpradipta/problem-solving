@@ -2,7 +2,7 @@ package main
 
 import (
     "bufio"
-    // "fmt"
+    "fmt"
     "io"
     "os"
     "strconv"
@@ -17,20 +17,21 @@ import (
 
 func miniMaxSum(arr []int32) {
     // Write your code here
-    var result int32
+    var result int64
     for i := 0; i < len(arr); i++ {
-        if i - 1 == 14 {
-            result += arr[i]
-        } else if i - 2 == 13{
-            result += arr[i]
-        } else if i - 3 == 12 {
-            result += arr[i]
-        } else if i - 4 == 11 {
-            result += arr[i]
-        } else if i - 5 == 10 {
-            result += arr[i]
+        result += int64(arr[i])
+    }
+    var maximum int64
+    var minimum int64
+    for j := 0; j < len(arr); j++ {
+        if result-int64(arr[j]) < minimum || minimum == 0 {
+            minimum = result - int64(arr[j])
+        }
+        if result-int64(arr[j]) > maximum || maximum == 0{
+            maximum = result - int64(arr[j])
         }
     }
+    fmt.Println(minimum, maximum)
 }
 
 func main() {

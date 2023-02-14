@@ -1,4 +1,4 @@
-package problemsolving
+package main
 
 func isValid(s string) bool {
 	var bentuk []byte
