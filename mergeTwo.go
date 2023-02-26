@@ -1,4 +1,4 @@
-package main
+package codetest
 
 /**
  * Definition for singly-linked list.
